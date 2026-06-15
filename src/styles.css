@@ -1,0 +1,234 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Editorial palette */
+  --paper: oklch(0.99 0.003 80);
+  --ink: oklch(0.18 0.005 60);
+  --gold: oklch(0.74 0.12 78);
+  --gold-soft: oklch(0.88 0.06 82);
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ink);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--paper);
+  --secondary: oklch(0.96 0.005 80);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.96 0.005 80);
+  --muted-foreground: oklch(0.48 0.01 70);
+  --accent: var(--gold);
+  --accent-foreground: var(--ink);
+  --destructive: oklch(0.55 0.22 27);
+  --destructive-foreground: var(--paper);
+  --border: oklch(0.9 0.005 70);
+  --input: oklch(0.92 0.005 70);
+  --ring: var(--gold);
+
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-serif {
+    font-family: var(--font-serif);
+    letter-spacing: 0;
+  }
+  h1,
+  h2 {
+    font-weight: 500;
+  }
+  h3,
+  h4 {
+    font-weight: 600;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  .overline {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .gold-italic {
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .hairline {
+    border-bottom: 1px solid var(--gold);
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+}
+
+@layer components {
+  .display-title,
+  .page-title,
+  .section-title,
+  .card-title {
+    font-family: var(--font-serif);
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+
+  .display-title {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.02;
+  }
+
+  .page-title {
+    font-size: 2.375rem;
+    font-weight: 500;
+    line-height: 1.08;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.12;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.18;
+  }
+
+  .editorial-lead {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .lead-copy {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+
+  .body-copy {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .service-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--muted-foreground);
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .service-label::before {
+    width: 1.5rem;
+    height: 1px;
+    flex: none;
+    background-color: var(--gold);
+    content: "";
+  }
+
+  @media (min-width: 768px) {
+    .display-title {
+      font-size: 3.75rem;
+    }
+
+    .page-title {
+      font-size: 3rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .card-title {
+      font-size: 1.625rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .display-title {
+      font-size: 4rem;
+    }
+  }
+}
+
+@utility container-edit {
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+.tracking-wide,
+.tracking-wider,
+.tracking-widest,
+.tracking-tight {
+  letter-spacing: 0;
+}
