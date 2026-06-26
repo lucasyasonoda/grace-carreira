@@ -3,7 +3,7 @@ export const SITE = {
   tagline: "Advogada — Direitos Culturais e Gestão Pública",
   email: "contato@gracecarreira.adv.br",
   whatsapp: "5511999999999",
-  eduzz: "https://www.eduzz.com/",
+  eduzz: "https://chk.eduzz.com/Q9N5DOYB01",
   spotify: "https://open.spotify.com/show/4ubIfa4cb0jHw3HOmPNG5i?si=6n26fj4PST-6kNifbORsFQ",
   oab: "OAB/SP",
   city: "São Paulo, SP",
