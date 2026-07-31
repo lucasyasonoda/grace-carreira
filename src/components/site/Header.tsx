@@ -80,14 +80,6 @@ export function Header() {
             Artigos
           </Link>
           <Link
-            to="/synapsecare"
-            activeProps={{ className: "text-foreground" }}
-            inactiveProps={{ className: "text-muted-foreground" }}
-            className="hover:text-foreground transition"
-          >
-            SynapseCare
-          </Link>
-          <Link
             to="/contato"
             className="inline-flex items-center px-5 py-2.5 bg-foreground text-background text-xs tracking-widest uppercase hover:bg-foreground/85 transition"
           >
@@ -126,9 +118,6 @@ export function Header() {
             </Link>
             <Link to="/artigos" onClick={() => setOpen(false)}>
               Artigos
-            </Link>
-            <Link to="/synapsecare" onClick={() => setOpen(false)}>
-              SynapseCare
             </Link>
             <Link
               to="/contato"

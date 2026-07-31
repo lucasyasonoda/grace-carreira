@@ -1,12 +1,17 @@
 export const SITE = {
   name: "Grace Carreira",
   tagline: "Advogada — Direitos Culturais e Gestão Pública",
-  email: "contato@gracecarreira.adv.br",
+  email: "gracecarreiraadv@gmail.com",
+  // ⏳ Aguardando número definitivo de WhatsApp da Grace — placeholder mantido até confirmação.
   whatsapp: "5511999999999",
   eduzz: "https://chk.eduzz.com/Q9N5DOYB01",
   spotify: "https://open.spotify.com/show/4ubIfa4cb0jHw3HOmPNG5i?si=6n26fj4PST-6kNifbORsFQ",
-  oab: "OAB/SP",
-  city: "São Paulo, SP",
+  oab: "OAB/SP 316166",
+  address: "Rua Francisca de Queiroz, 211, sala 7 — Vila Independência, Sorocaba/SP",
+  instagram: "https://instagram.com/gracecarreira",
+  linkedin: "https://www.linkedin.com/in/gracecarreira",
+  // ⏳ Confirmar handle exato do Facebook com Amábile/Grace.
+  facebook: "https://facebook.com/gracecarreira",
 };
 
 export type Area = {
@@ -43,7 +48,6 @@ export const AREAS: Area[] = [
         title: "Sistemas Municipais de Cultura",
         body: "Diagnóstico, estruturação e implementação de sistemas municipais conforme diretrizes do MinC — incluindo elaboração do Plano Municipal de Cultura, Fundo de Cultura, estruturação de conselhos, criação de indicadores e avaliação, além de capacitação de equipes técnicas para gestão continuada.",
         hint: "Seu município ainda não tem um sistema organizado, ou precisa se adequar? Mapeamos o que já existe, identificamos as lacunas e construímos a estrutura certa para a sua realidade.",
-        ref: "SNC — Lei nº 14.835/2024 e Lei 14.903/2024",
       },
       {
         tag: "Planejamento estratégico",
@@ -85,32 +89,28 @@ export const AREAS: Area[] = [
       "O Brasil conta com um dos sistemas de fomento à cultura mais complexos do mundo — e navegar por ele exige conhecimento técnico aprofundado sobre enquadramento de projetos, conformidade fiscal e gestão de prestação de contas. Um erro de enquadramento pode inviabilizar um projeto inteiro; uma prestação de contas mal elaborada pode resultar em devolução de recursos e impedimentos futuros. Com experiência em assessoramento de projetos incentivados, ofereço assessoria jurídica especializada em todo o ciclo das leis de incentivo — da análise de elegibilidade à resolução de pendências junto aos órgãos federais e estaduais. Seu projeto cultural merece chegar onde precisa chegar.",
     subservices: [
       {
-        tag: "Federal",
+        tag: "Lei Rouanet",
         title: "Lei Rouanet — Lei Federal de Incentivo à Cultura",
         body: "Análise de elegibilidade e enquadramento de projetos conforme critérios federais; orientação sobre categorias de financiamento (artes cênicas, audiovisual, música, patrimônio e demais segmentos); consultoria em prestação de contas e comprovação de gastos; e resolução de pendências e recursos junto ao Ministério da Cultura.",
         hint: "A Lei Rouanet é o principal mecanismo de financiamento da cultura brasileira — mas também um dos mais exigentes em termos de conformidade. Garantimos que o seu projeto seja enquadrado corretamente desde o início, evitando retrabalho e riscos na captação.",
-        ref: "Lei 8.313/1991 — PRONAC / Lei Rouanet",
       },
       {
-        tag: "Federal",
+        tag: "Lei Paulo Gustavo / PNAB",
         title: "Lei Paulo Gustavo e PNAB — Política Nacional Aldir Blanc",
         body: "Consultoria para acesso a recursos dos fundos de apoio; análise de elegibilidade e enquadramento de projetos; elaboração de propostas alinhadas aos critérios de seleção; acompanhamento de processos de aprovação; e gestão de conformidade fiscal e legal na execução e prestação de contas.",
         hint: "Essas políticas representam um volume significativo de recursos descentralizados para estados e municípios. Para gestores públicos, a assessoria garante que os repasses sejam operacionalizados corretamente. Para proponentes, assegura acesso efetivo ao fomento disponível.",
-        ref: "Lei 14.399/2022 — PNAB / LC 195/2022 — Lei Paulo Gustavo",
       },
       {
         tag: "Estadual — São Paulo",
         title: "ProAC — Programa de Ação Cultural do Estado de São Paulo",
         body: "Consultoria para acesso aos diferentes programas ProAC (Editais, Bolsas e Prêmios); análise de enquadramento conforme linhas de financiamento; elaboração de projetos bem estruturados; acompanhamento do processo de seleção e aprovação; gestão de contratos e prestação de contas; e suporte em auditorias e processos de verificação.",
         hint: "O ProAC opera com múltiplas linhas e critérios distintos para cada categoria. Conhecer essas nuances faz a diferença entre um projeto aprovado e um projeto devolvido por inadequação formal.",
-        ref: "Lei Estadual 12.268/2006 — ProAC SP",
       },
       {
-        tag: "Organizações da sociedade civil",
+        tag: "OSCs",
         title: "MROSC — Marco Regulatório das Organizações da Sociedade Civil",
         body: "Consultoria para adequação de OSCs à legislação vigente; estruturação de termos de colaboração e fomento; elaboração de planos de trabalho conformes; acompanhamento de prestação de contas; e resolução de pendências em auditorias.",
         hint: "Organizações que atuam com cultura e dependem de parcerias com o poder público precisam de estrutura jurídica adequada para firmar convênios e termos de fomento sem risco de irregularidade.",
-        ref: "Lei 13.019/2014 — MROSC",
       },
       {
         tag: "Gestão de projetos",
@@ -143,7 +143,6 @@ export const AREAS: Area[] = [
         title: "Proteção de Direitos Autorais",
         body: "Consultoria sobre direitos autorais e direitos conexos; registro de obras artísticas junto a órgãos competentes; análise de violação de direitos e estratégia de proteção; negociação de cessão de direitos com terceiros; e defesa em processos administrativos e judiciais de infração autoral.",
         hint: "Sua obra é protegida pela lei desde o momento da criação — mas o registro e a formalização são o que tornam essa proteção efetiva na prática. Atuamos desde a orientação preventiva até a defesa em casos de uso indevido.",
-        ref: "Lei 9.610/1998 — Lei de Direitos Autorais",
       },
       {
         tag: "Contratos artísticos",
@@ -156,7 +155,6 @@ export const AREAS: Area[] = [
         title: "Registro de Marcas e Propriedade Intelectual",
         body: "Consultoria sobre registro de marcas e patentes relacionadas a projetos culturais; proteção de nomes artísticos e identidades visuais; consultoria sobre domínios e propriedade digital; estruturação de portfólio de propriedade intelectual; e estratégia de proteção em múltiplas jurisdições.",
         hint: "O nome artístico, a identidade visual e a marca têm valor comercial e precisam de proteção formal. Estruturamos esse portfólio de forma estratégica, antecipando conflitos antes que eles aconteçam.",
-        ref: "Lei 9.279/1996 — Lei de Propriedade Industrial",
       },
       {
         tag: "Carreira artística",
@@ -195,7 +193,6 @@ export const AREAS: Area[] = [
         title: "Tombamento e Proteção de Bens Culturais",
         body: "Consultoria sobre processos de tombamento nas esferas federal, estadual e municipal; elaboração de pareceres jurídicos; acompanhamento de processos junto a órgãos de proteção (IPHAN, CONDEPHAAT, CONPRESP e demais); orientação sobre direitos e obrigações de proprietários de bens tombados; e defesa em processos administrativos relacionados a patrimônio.",
         hint: "Ter um bem tombado gera obrigações legais específicas — mas também abre acesso a instrumentos de financiamento e benefícios fiscais que muitos proprietários desconhecem. Orientamos em ambas as direções: o que a lei exige e o que ela permite.",
-        ref: "Decreto-Lei 25/1937 — Lei do Tombamento / Art. 216 da Constituição Federal",
       },
       {
         tag: "Financiamento",
@@ -214,14 +211,12 @@ export const AREAS: Area[] = [
         title: "Patrimônio Cultural Imaterial",
         body: "Consultoria sobre o processo de registro de patrimônio imaterial (saberes, práticas, formas de expressão e lugares); acompanhamento junto ao IPHAN e demais órgãos competentes; orientação sobre direitos de comunidades detentoras de patrimônio imaterial; e estratégia de valorização e transmissão de conhecimento tradicional.",
         hint: "O patrimônio imaterial — festas populares, saberes tradicionais, expressões culturais — tem proteção jurídica própria e pode ser registrado em nível municipal, estadual ou federal. Para comunidades e municípios, esse reconhecimento formal fortalece identidade territorial e abre portas para financiamento cultural específico.",
-        ref: "Decreto 3.551/2000 — Registro de Bens Culturais Imateriais",
       },
       {
         tag: "Sítios históricos",
         title: "Gestão de Sítios Históricos e Arqueológicos",
         body: "Consultoria sobre gestão de áreas com potencial arqueológico; acompanhamento de processos de escavação e pesquisa junto aos órgãos competentes; orientação sobre conformidade com a legislação arqueológica; e estratégia de desenvolvimento econômico compatível com a preservação do sítio.",
         hint: "Empreendimentos em áreas com potencial arqueológico exigem licenciamento específico e podem ser paralisados sem aviso caso não sigam os protocolos legais. Orientamos desde a fase de diagnóstico até a regularização completa junto ao IPHAN.",
-        ref: "Lei 3.924/1961 — Proteção de Monumentos Arqueológicos e Pré-históricos",
       },
       {
         tag: "Desenvolvimento urbano",

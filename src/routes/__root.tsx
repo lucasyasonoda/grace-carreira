@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { WhatsappFloatButton } from "@/components/site/WhatsappFloatButton";
 
 function NotFoundComponent() {
   return (
@@ -121,6 +122,7 @@ function RootComponent() {
         <Outlet />
       </main>
       <Footer />
+      <WhatsappFloatButton />
     </QueryClientProvider>
   );
 }

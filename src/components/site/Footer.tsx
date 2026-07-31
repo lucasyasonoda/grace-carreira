@@ -42,11 +42,6 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/synapsecare" className="hover:text-foreground">
-                SynapseCare
-              </Link>
-            </li>
-            <li>
               <Link to="/contato" className="hover:text-foreground">
                 Contato
               </Link>
@@ -74,7 +69,7 @@ export function Footer() {
         <div>
           <div className="overline mb-4">Contato</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>{SITE.city}</li>
+            <li>{SITE.address}</li>
             <li>
               <a href={`mailto:${SITE.email}`} className="hover:text-foreground">
                 {SITE.email}
@@ -98,6 +93,37 @@ export function Footer() {
                 className="hover:text-foreground"
               >
                 Spotify
+              </a>
+            </li>
+            <li>
+              <a
+                href={SITE.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-foreground"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href={SITE.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-foreground"
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              {/* ⏳ Confirmar handle exato do Facebook com Amábile/Grace */}
+              <a
+                href={SITE.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-foreground"
+              >
+                Facebook
               </a>
             </li>
           </ul>

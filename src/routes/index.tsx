@@ -1,18 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/grace-hero.jpg";
-import { AREAS, TESTIMONIALS } from "@/content/site";
+import { AREAS, ARTICLES, SITE, TESTIMONIALS } from "@/content/site";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Grace Carreira — Direito Cultural e Gestão Pública" },
+      { title: "Grace Carreira — Direitos Culturais e Gestão Pública" },
       {
         name: "description",
         content:
           "20+ anos de experiência em direitos culturais. 16 anos na Secretaria de Estado da Cultura de SP. Membro do CONPRESP. Assessoria jurídica para prefeituras, organizações e artistas.",
       },
-      { property: "og:title", content: "Grace Carreira — Direito Cultural e Gestão Pública" },
+      { property: "og:title", content: "Grace Carreira — Direitos Culturais e Gestão Pública" },
       {
         property: "og:description",
         content:
@@ -75,13 +75,15 @@ function Home() {
       </section>
 
       {/* CREDENTIALS STRIP */}
+      {/* ⏳ Confirmar com a Grace: 20 ou 25 anos na SEC-SP */}
       <section className="border-y border-border bg-secondary/30">
-        <div className="container-edit py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+        <div className="container-edit py-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-8 text-center md:text-left">
           {[
-            { n: "20+", l: "anos de experiência em direito cultural" },
-            { n: "16", l: "anos na Secretaria de Estado da Cultura de SP" },
+            { n: "20+", l: "anos de experiência em direitos culturais" },
+            { n: "20+", l: "anos na Secretaria de Estado da Cultura de SP" },
             { n: "14", l: "anos de atuação na área jurídica" },
             { n: "2023–2026", l: "Atuação no CONPRESP — Patrimônio de SP" },
+            { n: "2.000+", l: "pessoas atendidas em palestras, oficinas e atividades" },
           ].map((s) => (
             <div key={s.l} className="md:border-l md:first:border-l-0 md:pl-8 border-border">
               <div className="font-serif text-3xl font-semibold text-[color:var(--gold)]">
@@ -136,21 +138,73 @@ function Home() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-[#26352b] text-white">
-        <div className="container-edit py-20 md:py-24 grid lg:grid-cols-[1fr_auto] gap-10 items-end">
-          <div className="max-w-3xl">
-            <div className="overline hairline">Projeto social e saúde mental</div>
-            <h2 className="section-title mt-6">SynapseCare</h2>
-            <p className="editorial-lead italic text-white/75 mt-5">
-              Um espaço onde ciência, arte e afeto se encontram para cuidar de quem cuida.
-            </p>
+      {/* ARTIGOS */}
+      <section className="container-edit py-24 md:py-32 border-t border-border">
+        <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
+          <div className="max-w-2xl">
+            <div className="overline hairline">Artigos</div>
+            <h2 className="section-title mt-6">
+              Reflexões sobre <span className="gold-italic">direito e cultura</span>.
+            </h2>
           </div>
           <Link
-            to="/synapsecare"
-            className="inline-flex items-center gap-2 px-7 py-4 bg-white text-[#26352b] text-xs tracking-widest uppercase hover:bg-white/90 transition"
+            to="/artigos"
+            className="text-sm uppercase tracking-widest hover:text-[color:var(--gold)] inline-flex items-center gap-2"
           >
-            Conhecer o projeto <ArrowRight size={14} />
+            Ver todos <ArrowRight size={14} />
           </Link>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-px bg-border border border-border">
+          {ARTICLES.slice(0, 3).map((article) => (
+            <Link
+              key={article.slug}
+              to="/artigos/$slug"
+              params={{ slug: article.slug }}
+              className="group bg-background p-8 hover:bg-secondary/60 transition"
+            >
+              <div className="overline text-muted-foreground">{article.category}</div>
+              <h3 className="card-title mt-4 group-hover:text-[color:var(--gold)] transition line-clamp-3">
+                {article.title}
+              </h3>
+              <p className="text-sm text-muted-foreground mt-4 leading-relaxed line-clamp-3">
+                {article.excerpt}
+              </p>
+              <div className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-widest">
+                Ler artigo <ArrowRight size={12} className="group-hover:translate-x-1 transition" />
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTEÚDO DIGITAL */}
+      <section className="border-y border-border bg-secondary/25">
+        <div className="container-edit py-20 md:py-24 grid lg:grid-cols-[1fr_auto] gap-10 items-end">
+          <div className="max-w-3xl">
+            <div className="overline hairline">Conteúdo Digital</div>
+            <h2 className="section-title mt-6">Cursos, podcast e materiais de apoio.</h2>
+            <p className="editorial-lead italic text-muted-foreground mt-5">
+              Conhecimento prático para dominar a burocracia cultural com autonomia — no vídeo, no
+              texto e no áudio.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={SITE.spotify}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-7 py-4 border border-foreground text-xs tracking-widest uppercase hover:bg-foreground hover:text-background transition"
+            >
+              Ouvir no Spotify <ExternalLink size={14} />
+            </a>
+            <Link
+              to="/cursos"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-foreground text-background text-xs tracking-widest uppercase hover:bg-foreground/85 transition"
+            >
+              Ver Conteúdo Digital <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -136,7 +136,7 @@ function Contato() {
                   <div className="text-xs uppercase tracking-widest text-muted-foreground">
                     Localização
                   </div>
-                  <div className="font-serif text-base font-semibold">{SITE.city}</div>
+                  <div className="font-serif text-base font-semibold">{SITE.address}</div>
                 </div>
               </li>
             </ul>

@@ -10,12 +10,12 @@ export const Route = createFileRoute("/atuacao/")({
       {
         name: "description",
         content:
-          "Gestão Cultural, Leis de Incentivo, Contratos e Direitos Autorais, Patrimônio Cultural — quatro áreas de atuação especializada em direito cultural.",
+          "Gestão Cultural, Leis de Incentivo, Contratos e Direitos Autorais, Patrimônio Cultural — quatro áreas de atuação especializada em direitos culturais.",
       },
       { property: "og:title", content: "Áreas de Atuação — Grace Carreira" },
       {
         property: "og:description",
-        content: "Quatro áreas de atuação especializada em direito cultural.",
+        content: "Quatro áreas de atuação especializada em direitos culturais.",
       },
       { property: "og:url", content: "/atuacao" },
     ],
@@ -32,7 +32,7 @@ function AtuacaoHub() {
         title={
           <>
             Quatro frentes de especialização em{" "}
-            <span className="gold-italic">direito cultural</span>.
+            <span className="gold-italic">direitos culturais</span>.
           </>
         }
         lead="Cada área cobre um conjunto distinto de demandas — da estruturação de políticas públicas à proteção autoral de artistas independentes. Explore o escopo, os instrumentos legais aplicáveis e quando faz sentido procurar consultoria especializada."

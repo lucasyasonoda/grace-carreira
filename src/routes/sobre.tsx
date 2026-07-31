@@ -26,19 +26,26 @@ export const Route = createFileRoute("/sobre")({
 
 const TIMELINE = [
   {
-    period: "Formação e início de carreira",
-    title: "A base jurídica e a escolha pelo setor cultural",
-    body: "Com formação em Direito e especialização em Propriedade Imaterial, Grace desenvolveu sua carreira na área dos Direitos Culturais e da Gestão Pública da Cultura, construindo uma atuação focada na interseção entre o ordenamento jurídico e as políticas culturais.",
-  },
-  {
-    period: "16 anos — Secretaria de Estado da Cultura de SP",
+    period: "Secretaria de Estado da Cultura de SP",
     title: "Projeto Oficinas Culturais e Diretoria de Cultura",
-    body: "Atuação por 16 anos no Projeto Oficinas Culturais da Secretaria de Estado da Cultura de São Paulo e por 2 anos como Diretora de Cultura de Araçoiaba da Serra/SP. Uma experiência que proporcionou visão completa do funcionamento das políticas culturais públicas — dos editais à execução, da captação à prestação de contas.",
+    body: "16 anos de atuação no Projeto Oficinas Culturais da Secretaria de Estado da Cultura de São Paulo. Entre 2019 e 2020, foi Diretora de Cultura de Araçoiaba da Serra/SP.",
   },
   {
-    period: "2023–2026 — CONPRESP",
-    title: "Membro do Conselho Municipal de Patrimônio de SP",
-    body: "Integrou o CONPRESP — Conselho Municipal de Preservação do Patrimônio Histórico, Cultural e Ambiental da Cidade de São Paulo —, atuando diretamente nas decisões que definem a proteção da memória urbana e do patrimônio cultural paulistano.",
+    period: "Formação",
+    title: "Base jurídica e especialização",
+    body: "Formação em Direito, com Especialização em Propriedade Imaterial pela ESA/OAB. Também é jornalista.",
+  },
+  {
+    period: "Conselhos e comissões",
+    title: "Participação em Conselhos e Comissões",
+    // ⏳ Datas e nomes completos a confirmar com a Grace.
+    items: [
+      "CMDP — Conselho Municipal de Defesa do Patrimônio de Sorocaba (2025–2027)",
+      "CONPRESP — Patrimônio de São Paulo (2023–2026)",
+      "Presidente da Comissão de Direito Urbanístico — OAB Sorocaba 24ª Subseção (datas a confirmar)",
+      "Membro do CMPC — Conselho Municipal de Política Cultural (2018–2022)",
+      "Comissão de Desenvolvimento Cultural de Sorocaba (2002–2004 e 2012)",
+    ],
   },
 ];
 
@@ -67,8 +74,9 @@ function Sobre() {
           />
           <div className="mt-8 grid grid-cols-2 gap-6 text-sm">
             <div>
-              <div className="font-serif text-3xl text-[color:var(--gold)]">20+</div>
-              <div className="text-muted-foreground">anos no direito cultural</div>
+              {/* ⏳ Confirmar com a Grace: 20 ou 25 anos */}
+              <div className="font-serif text-3xl text-[color:var(--gold)]">25+</div>
+              <div className="text-muted-foreground">anos nos direitos culturais</div>
             </div>
             <div>
               <div className="font-serif text-3xl text-[color:var(--gold)]">16</div>
@@ -79,16 +87,19 @@ function Sobre() {
               <div className="text-muted-foreground">anos na área jurídica</div>
             </div>
             <div>
-              <div className="font-serif text-3xl text-[color:var(--gold)]">2023–2026</div>
-              <div className="text-muted-foreground">atuação no CONPRESP</div>
+              <div className="font-serif text-3xl text-[color:var(--gold)]">5</div>
+              <div className="text-muted-foreground">conselhos e comissões</div>
             </div>
           </div>
         </div>
 
         <div className="body-copy space-y-6">
+          {/* ⏳ Confirmar com a Grace: 20 ou 25 anos */}
           <p>
-            Grace Carreira é advogada especialista em Direitos Culturais e Gestão Pública, com mais
-            de 20 anos de experiência na interseção entre o direito e a cultura.
+            Grace Carreira é advogada e jornalista, com Especialização em Propriedade Imaterial pela
+            ESA/OAB. Possui experiência de mais de 25 anos em direitos culturais e gestão pública.
+            Consultora em direitos culturais no escritório Moreira Pires Advogados e idealizadora do
+            projeto que une saúde mental, autonomia e tecnologia.
           </p>
           <p>
             Sua trajetória é construída de dentro para fora: por 16 anos, atuou na Secretaria de
@@ -135,7 +146,18 @@ function Sobre() {
               </div>
               <div>
                 <h3 className="card-title">{t.title}</h3>
-                <p className="text-muted-foreground mt-4 leading-relaxed">{t.body}</p>
+                {"items" in t && t.items ? (
+                  <ul className="text-muted-foreground mt-4 leading-relaxed space-y-2">
+                    {t.items.map((item) => (
+                      <li key={item} className="flex gap-2">
+                        <span className="text-[color:var(--gold)]">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-muted-foreground mt-4 leading-relaxed">{t.body}</p>
+                )}
               </div>
             </li>
           ))}
