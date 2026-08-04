@@ -1,3 +1,8 @@
+// Analytics — IDs configurados via variáveis de ambiente (.env), para não expor/versionar
+// o ID de produção direto no código. Ver .env.example na raiz do projeto.
+export const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID ?? "";
+export const META_PIXEL_ID = import.meta.env.VITE_META_PIXEL_ID ?? "";
+
 export const SITE = {
   name: "Grace Carreira",
   tagline: "Advogada — Direitos Culturais e Gestão Pública",

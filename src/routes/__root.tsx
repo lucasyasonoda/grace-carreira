@@ -13,6 +13,8 @@ import appCss from "../styles.css?url";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsappFloatButton } from "@/components/site/WhatsappFloatButton";
+import { Analytics } from "@/components/site/Analytics";
+import { GA_MEASUREMENT_ID, META_PIXEL_ID } from "@/content/site";
 
 function NotFoundComponent() {
   return (
@@ -92,6 +94,40 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap",
       },
     ],
+    scripts: [
+      // Google Analytics (GA4) — só injeta se VITE_GA_MEASUREMENT_ID estiver configurado.
+      ...(GA_MEASUREMENT_ID
+        ? [
+            {
+              src: `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`,
+              async: true,
+            },
+            {
+              children: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`,
+            },
+          ]
+        : []),
+      // Meta Pixel — só injeta se VITE_META_PIXEL_ID estiver configurado.
+      ...(META_PIXEL_ID
+        ? [
+            {
+              children: `!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${META_PIXEL_ID}');
+fbq('track', 'PageView');`,
+            },
+          ]
+        : []),
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -106,6 +142,17 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        {META_PIXEL_ID && (
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style={{ display: "none" }}
+              src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+              alt=""
+            />
+          </noscript>
+        )}
         {children}
         <Scripts />
       </body>
@@ -117,6 +164,7 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <Analytics />
       <Header />
       <main>
         <Outlet />

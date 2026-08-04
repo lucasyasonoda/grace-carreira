@@ -30,3 +30,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Variáveis de ambiente (IDs de analytics etc.) — não versionar
+.env
+.env.local
+.env.*.local
+!.env.example
