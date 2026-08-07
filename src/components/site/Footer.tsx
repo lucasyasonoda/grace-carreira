@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { AREAS, SITE } from "@/content/site";
+import { trackWhatsappClick } from "@/lib/analytics";
 
 export function Footer() {
   return (
@@ -80,6 +81,7 @@ export function Footer() {
                 href={`https://wa.me/${SITE.whatsapp}`}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackWhatsappClick("footer")}
                 className="hover:text-foreground"
               >
                 WhatsApp
