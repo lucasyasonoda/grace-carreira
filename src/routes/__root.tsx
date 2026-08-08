@@ -20,7 +20,7 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <div className="overline">404</div>
+        <div className="eyebrow">404</div>
         <h1 className="page-title mt-4">Página não encontrada</h1>
         <p className="mt-4 text-muted-foreground">
           A página que você procura não existe ou foi movida.

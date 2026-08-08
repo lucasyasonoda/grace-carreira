@@ -49,7 +49,7 @@ function ArtigoPage() {
         >
           <ArrowLeft size={12} /> Artigos
         </Link>
-        <div className="overline mt-8">{article.category}</div>
+        <div className="eyebrow mt-8">{article.category}</div>
         <h1 className="page-title mt-4">{article.title}</h1>
         <p className="lead-copy text-muted-foreground mt-5">{article.excerpt}</p>
 

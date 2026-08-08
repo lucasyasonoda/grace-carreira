@@ -48,7 +48,7 @@ function Contato() {
       <section className="container-edit py-16 md:py-24 grid lg:grid-cols-[1.3fr_1fr] gap-16">
         <form onSubmit={onSubmit} className="space-y-6">
           <div>
-            <label className="overline">Nome</label>
+            <label className="eyebrow">Nome</label>
             <input
               required
               value={form.nome}
@@ -57,7 +57,7 @@ function Contato() {
             />
           </div>
           <div>
-            <label className="overline">E-mail</label>
+            <label className="eyebrow">E-mail</label>
             <input
               required
               type="email"
@@ -67,7 +67,7 @@ function Contato() {
             />
           </div>
           <div>
-            <label className="overline">Perfil</label>
+            <label className="eyebrow">Perfil</label>
             <select
               value={form.perfil}
               onChange={(e) => setForm({ ...form, perfil: e.target.value })}
@@ -82,7 +82,7 @@ function Contato() {
             </select>
           </div>
           <div>
-            <label className="overline">Mensagem</label>
+            <label className="eyebrow">Mensagem</label>
             <textarea
               required
               rows={5}
@@ -101,7 +101,7 @@ function Contato() {
 
         <aside className="space-y-8">
           <div>
-            <div className="overline hairline">Canais diretos</div>
+            <div className="eyebrow hairline">Canais diretos</div>
             <ul className="mt-8 space-y-6">
               <li className="flex items-start gap-4">
                 <Mail size={20} className="text-[color:var(--gold)] mt-1" />
@@ -143,7 +143,7 @@ function Contato() {
           </div>
 
           <div className="border-t border-border pt-8">
-            <div className="overline">Atendimento</div>
+            <div className="eyebrow">Atendimento</div>
             <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
               Atuação consultiva e contenciosa em todo o território nacional, com reuniões
               presenciais em São Paulo e online para demais regiões.

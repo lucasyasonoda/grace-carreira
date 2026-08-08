@@ -44,12 +44,12 @@ function Artigos() {
             params={{ slug: a.slug }}
             className="group block border-t border-foreground pt-6 hover:opacity-70 transition"
           >
-            <div className="overline">{a.category}</div>
+            <div className="eyebrow">{a.category}</div>
             <h2 className="card-title mt-4 group-hover:text-[color:var(--gold)] transition">
               {a.title}
             </h2>
             <p className="text-sm text-muted-foreground mt-4 leading-relaxed">{a.excerpt}</p>
-            <div className="overline mt-6">Ler artigo →</div>
+            <div className="eyebrow mt-6">Ler artigo →</div>
           </Link>
         ))}
       </section>

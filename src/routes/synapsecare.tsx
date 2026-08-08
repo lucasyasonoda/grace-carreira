@@ -45,7 +45,7 @@ function SynapseCare() {
       <section className="bg-[#f7f4ee] text-[#26352b]">
         <div className="container-edit min-h-[78vh] py-16 md:py-24 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
-            <div className="overline hairline">Da resiliência ao propósito</div>
+            <div className="eyebrow hairline">Da resiliência ao propósito</div>
             <h1 className="display-title mt-7">
               Construindo sua <span className="italic text-[#a55f55]">fortaleza</span>.
             </h1>
@@ -73,7 +73,7 @@ function SynapseCare() {
             <img
               src={heroImg}
               alt="Grace Carreira"
-              className="w-full aspect-[4/5] object-cover grayscale"
+              className="w-full aspect-[4/5] object-cover"
             />
             <figcaption className="absolute inset-x-0 bottom-0 p-7 md:p-10 bg-black/65 text-white font-serif italic text-lg leading-relaxed">
               “Sua história é o seu maior capital. Vamos construir seu próximo capítulo juntas.”
@@ -136,7 +136,7 @@ function SynapseCare() {
             </figcaption>
           </figure>
           <div>
-            <div className="overline hairline">História e propósito</div>
+            <div className="eyebrow hairline">História e propósito</div>
             <h2 className="section-title mt-6">Da resiliência à construção de fortalezas</h2>
             <div className="body-copy space-y-6 text-[#26352b]/80 mt-8">
               <p>
@@ -181,7 +181,7 @@ function SynapseCare() {
       <section id="synapp" className="bg-[#26352b] text-white">
         <div className="container-edit py-20 md:py-28 grid lg:grid-cols-2 gap-14 items-center">
           <div>
-            <div className="overline hairline">Tecnologia com empatia</div>
+            <div className="eyebrow hairline">Tecnologia com empatia</div>
             <h2 className="section-title mt-6">SynApp</h2>
             <p className="lead-copy text-white/70 mt-5">
               O aplicativo que nasceu de anotações em cadernos e planilhas para se tornar seu aliado
@@ -223,7 +223,7 @@ function SynapseCare() {
       </section>
 
       <section className="container-edit py-20 md:py-24 text-center">
-        <div className="overline hairline">Cursos e conteúdos digitais</div>
+        <div className="eyebrow hairline">Cursos e conteúdos digitais</div>
         <h2 className="section-title mt-6">Formações disponíveis na EDUZZ</h2>
         <p className="text-muted-foreground mt-5 max-w-2xl mx-auto">
           Acesse a plataforma para consultar cursos, inscrições e condições disponíveis.

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import bioImg from "@/assets/grace-bio.jpg";
 import { CTASection } from "@/components/site/CTASection";
 import { PageHero } from "@/components/site/PageHero";
+import trajetoriaImg from "@/assets/grace-bracoscruzados.jpg";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -70,7 +71,7 @@ function Sobre() {
             loading="lazy"
             width={1024}
             height={1280}
-            className="grayscale w-full aspect-[4/5] object-cover"
+            className="w-full aspect-[4/5] object-cover"
           />
           <div className="mt-8 grid grid-cols-2 gap-6 text-sm">
             <div>
@@ -125,11 +126,20 @@ function Sobre() {
       </section>
 
       <section className="container-edit py-16 md:py-24 border-t border-border">
-        <div className="overline hairline">Destaques da trajetória</div>
+        <div className="eyebrow hairline">Destaques da trajetória</div>
         <h2 className="section-title mt-6 max-w-2xl">
           Uma carreira construída <span className="gold-italic">de dentro para fora</span>.
         </h2>
-
+        <figure className="mt-12 md:mt-16">
+          <img
+            src={trajetoriaImg}
+            alt="Grace Carreira"
+            loading="lazy"
+            width={2400}
+            height={1028}
+            className="w-full aspect-[21/9] object-cover"
+          />
+        </figure>
         <ol className="mt-16 space-y-12 md:space-y-16">
           {TIMELINE.map((t, i) => (
             <li

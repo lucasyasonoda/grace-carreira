@@ -15,7 +15,7 @@ export function Footer() {
         </div>
 
         <div>
-          <div className="overline mb-4">Navegação</div>
+          <div className="eyebrow mb-4">Navegação</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>
               <Link to="/" className="hover:text-foreground">
@@ -51,7 +51,7 @@ export function Footer() {
         </div>
 
         <div>
-          <div className="overline mb-4">Áreas</div>
+          <div className="eyebrow mb-4">Áreas</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
             {AREAS.map((a) => (
               <li key={a.slug}>
@@ -68,7 +68,7 @@ export function Footer() {
         </div>
 
         <div>
-          <div className="overline mb-4">Contato</div>
+          <div className="eyebrow mb-4">Contato</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>{SITE.address}</li>
             <li>

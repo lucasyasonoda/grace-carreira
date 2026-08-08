@@ -44,7 +44,7 @@ function Cursos() {
   return (
     <>
       <section className="container-edit pt-20 md:pt-28 pb-16 md:pb-24 text-center">
-        <div className="overline hairline">Educação e conteúdo</div>
+        <div className="eyebrow hairline">Educação e conteúdo</div>
         <h1 className="display-title mt-7">
           Conhecimento que gera <span className="gold-italic">autonomia</span>.
         </h1>
@@ -57,7 +57,7 @@ function Cursos() {
       <section className="container-edit pb-20 md:pb-28">
         <div className="grid lg:grid-cols-2 border border-border bg-foreground text-background">
           <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-            <div className="overline">Curso online</div>
+            <div className="eyebrow">Curso online</div>
             <h2 className="section-title mt-6">Marco Regulatório do Fomento à Cultura</h2>
             <p className="lead-copy text-background/65 mt-5">
               5 videoaulas completas para você dominar a Lei 14.903/2024 e garantir a segurança
@@ -84,7 +84,7 @@ function Cursos() {
             <img
               src={courseImg}
               alt="Planejamento financeiro de projeto cultural"
-              className="absolute inset-0 w-full h-full object-cover grayscale"
+              className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-[#142038]/65" />
             <div className="absolute inset-0 flex items-center justify-center">
@@ -101,7 +101,7 @@ function Cursos() {
           <div className="grid lg:grid-cols-3 gap-px bg-border border border-border">
             <article className="bg-background p-8 flex flex-col min-h-[420px]">
               <Video className="text-[color:var(--gold)]" size={30} />
-              <div className="overline mt-7">Leitura comentada</div>
+              <div className="eyebrow mt-7">Leitura comentada</div>
               <h2 className="card-title mt-3">Plantão do Edital</h2>
               <p className="text-muted-foreground mt-6 leading-relaxed">
                 Leitura e interpretação detalhada dos editais abertos. Tire suas dúvidas e evite
@@ -123,7 +123,7 @@ function Cursos() {
 
             <article className="bg-background p-8 flex flex-col min-h-[420px]">
               <Headphones className="text-[color:var(--gold)]" size={30} />
-              <div className="overline mt-7">Podcast</div>
+              <div className="eyebrow mt-7">Podcast</div>
               <h2 className="card-title mt-3">Editais Descomplicados</h2>
               <p className="text-muted-foreground mt-6 leading-relaxed">
                 Episódios curtos e diretos ao ponto, desmistificando a burocracia cultural para você
@@ -145,7 +145,7 @@ function Cursos() {
 
             <article className="bg-background p-8 flex flex-col min-h-[420px]">
               <Download className="text-[color:var(--gold)]" size={30} />
-              <div className="overline mt-7">Material de apoio</div>
+              <div className="eyebrow mt-7">Material de apoio</div>
               <h2 className="card-title mt-3">Guias Gratuitos</h2>
               <p className="text-muted-foreground mt-6 leading-relaxed">
                 Solicite materiais de apoio para qualificar seus projetos e compreender melhor os

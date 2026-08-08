@@ -1,4 +1,4 @@
-import { useRouterState } from "@tanstack/react-route";
+import { useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import { GA_MEASUREMENT_ID, META_PIXEL_ID } from "@/content/site";
 

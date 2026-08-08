@@ -32,7 +32,7 @@ function Home() {
       <section className="container-edit pt-12 md:pt-20 pb-16 md:pb-24">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <div className="overline hairline">Advocacia e Consultoria</div>
+            <div className="eyebrow hairline">Advocacia e Consultoria</div>
             <h1 className="display-title mt-8">
               Transformando <span className="gold-italic">complexidade</span> em soluções culturais.
             </h1>
@@ -62,13 +62,13 @@ function Home() {
               alt="Grace Carreira, advogada especialista em direitos culturais"
               width={1024}
               height={1280}
-              className="w-full grayscale aspect-[4/5] object-cover"
+              className="w-full aspect-[4/5] object-cover"
             />
             <figure className="hidden md:block absolute -bottom-8 -left-8 max-w-xs bg-card border border-border p-6 shadow-xl">
               <p className="editorial-lead italic">
                 "Minha missão é transformar a burocracia em ponte para o acesso à cultura."
               </p>
-              <figcaption className="overline mt-4">— Grace Carreira</figcaption>
+              <figcaption className="eyebrow mt-4">— Grace Carreira</figcaption>
             </figure>
           </div>
         </div>
@@ -101,7 +101,7 @@ function Home() {
       <section className="container-edit py-24 md:py-32">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
-            <div className="overline hairline">Áreas de Atuação</div>
+            <div className="eyebrow hairline">Áreas de Atuação</div>
             <h2 className="section-title mt-6">
               Soluções jurídicas precisas para cada ator do{" "}
               <span className="gold-italic">ecossistema cultural</span>.
@@ -123,7 +123,7 @@ function Home() {
               params={{ slug: a.slug }}
               className="group bg-background p-8 md:p-10 hover:bg-secondary/60 transition"
             >
-              <div className="overline text-muted-foreground">{String(i + 1).padStart(2, "0")}</div>
+              <div className="eyebrow text-muted-foreground">{String(i + 1).padStart(2, "0")}</div>
               <h3 className="card-title mt-4 group-hover:text-[color:var(--gold)] transition">
                 {a.title}
               </h3>
@@ -142,7 +142,7 @@ function Home() {
       <section className="container-edit py-24 md:py-32 border-t border-border">
         <div className="flex flex-wrap items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
-            <div className="overline hairline">Artigos</div>
+            <div className="eyebrow hairline">Artigos</div>
             <h2 className="section-title mt-6">
               Reflexões sobre <span className="gold-italic">direito e cultura</span>.
             </h2>
@@ -163,7 +163,7 @@ function Home() {
               params={{ slug: article.slug }}
               className="group bg-background p-8 hover:bg-secondary/60 transition"
             >
-              <div className="overline text-muted-foreground">{article.category}</div>
+              <div className="eyebrow text-muted-foreground">{article.category}</div>
               <h3 className="card-title mt-4 group-hover:text-[color:var(--gold)] transition line-clamp-3">
                 {article.title}
               </h3>
@@ -182,7 +182,7 @@ function Home() {
       <section className="border-y border-border bg-secondary/25">
         <div className="container-edit py-20 md:py-24 grid lg:grid-cols-[1fr_auto] gap-10 items-end">
           <div className="max-w-3xl">
-            <div className="overline hairline">Conteúdo Digital</div>
+            <div className="eyebrow hairline">Conteúdo Digital</div>
             <h2 className="section-title mt-6">Cursos, podcast e materiais de apoio.</h2>
             <p className="editorial-lead italic text-muted-foreground mt-5">
               Conhecimento prático para dominar a burocracia cultural com autonomia — no vídeo, no
@@ -211,7 +211,7 @@ function Home() {
       {/* TESTIMONIALS */}
       <section className="bg-foreground text-background py-24 md:py-32">
         <div className="container-edit">
-          <div className="overline hairline" style={{ color: "var(--gold)" }}>
+          <div className="eyebrow hairline" style={{ color: "var(--gold)" }}>
             Depoimentos
           </div>
           <h2 className="section-title mt-6 max-w-2xl">O que dizem clientes e parceiros.</h2>

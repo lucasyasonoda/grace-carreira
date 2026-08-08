@@ -61,7 +61,7 @@ function AreaPage() {
       </section>
 
       <section className="container-edit pb-24">
-        <div className="overline hairline">Sub-serviços</div>
+        <div className="eyebrow hairline">Sub-serviços</div>
         <h2 className="section-title mt-6 mb-12">O que está incluído</h2>
 
         <div className="grid md:grid-cols-2 gap-px bg-border border border-border">
@@ -88,7 +88,7 @@ function AreaPage() {
       <CTASection text={area.cta} />
 
       <section className="container-edit pb-24">
-        <div className="overline">Outras áreas</div>
+        <div className="eyebrow">Outras áreas</div>
         <div className="grid md:grid-cols-3 gap-6 mt-6">
           {AREAS.filter((a) => a.slug !== area.slug).map((a) => (
             <Link
