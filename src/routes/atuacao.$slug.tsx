@@ -4,6 +4,11 @@ import { AREAS, type Area } from "@/content/site";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { LegalRef } from "@/components/site/LegalRef";
+import gestaoCulturalImg from "@/assets/imagem-brasil.png";
+
+const AREA_SIDE_IMAGES: Partial<Record<string, string>> = {
+  "gestao-cultural": gestaoCulturalImg,
+};
 
 export const Route = createFileRoute("/atuacao/$slug")({
   loader: ({ params }) => {
@@ -82,6 +87,16 @@ function AreaPage() {
               )}
             </article>
           ))}
+          {area.subservices.length % 2 === 1 && AREA_SIDE_IMAGES[area.slug] && (
+            <div className="bg-background">
+              <img
+                src={AREA_SIDE_IMAGES[area.slug]}
+                alt={area.title}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
         </div>
       </section>
 

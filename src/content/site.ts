@@ -14,7 +14,7 @@ export const SITE = {
   oab: "OAB/SP 316166",
   address: "Rua Francisca de Queiroz, 211, sala 7 — Vila Independência, Sorocaba/SP",
   instagram: "https://instagram.com/gracecarreira",
-  linkedin: "https://www.linkedin.com/in/gracecarreira",
+  linkedin: "https://www.linkedin.com/in/grace-carreira",
   // ⏳ Confirmar handle exato do Facebook com Amábile/Grace.
   facebook: "https://facebook.com/gracecarreira",
 };
