@@ -36,3 +36,8 @@ dist-ssr
 .env.local
 .env.*.local
 !.env.example
+# Sessões e Contexto do Antigravity & Obsidian
+contexto/
+GEMINI.md
+AGENTS.md
+.obsidian/
