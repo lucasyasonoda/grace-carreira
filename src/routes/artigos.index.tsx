@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ARTICLES } from "@/content/site";
 import { PageHero } from "@/components/site/PageHero";
+import { MidiaSection } from "@/components/site/MidiaSection";
 
 export const Route = createFileRoute("/artigos/")({
   head: () => ({
@@ -53,6 +54,8 @@ function Artigos() {
           </Link>
         ))}
       </section>
+
+      <MidiaSection />
     </>
   );
 }

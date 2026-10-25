@@ -297,3 +297,31 @@ export const ARTICLES = [
     ],
   },
 ];
+
+// Na mídia / entrevistas — para adicionar nova: inclua um objeto aqui.
+// published:false OU url vazia => item não aparece no site.
+export const INTERVIEWS: {
+  id: string;
+  outlet: string;
+  title: string;
+  url: string;
+  published: boolean;
+}[] = [
+  {
+    id: "cartacapital",
+    outlet: "CartaCapital",
+    title: "Entrevista para a CartaCapital",
+    url: "https://www.cartacapital.com.br/sociedade/orgao-de-preservacao-patrimonial-de-sao-paulo-vira-alvo-de-investigacao-sob-suspeita-de-aparelhamento/",
+    published: true,
+  },
+  {
+    id: "podcast-junior-mosco",
+    outlet: "Podcast",
+    title: "Podcast do Júnior Mosco",
+    url: "", // PENDENTE: link do episódio
+    published: false,
+  },
+];
+
+// Canal do YouTube — preencher url e mudar visible para true quando o link for enviado.
+export const YOUTUBE = { url: "", visible: false };

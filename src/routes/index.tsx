@@ -80,7 +80,7 @@ function Home() {
         <div className="container-edit py-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-8 text-center md:text-left">
           {[
             { n: "20+", l: "anos de experiência em direitos culturais" },
-            { n: "20+", l: "anos na Secretaria de Estado da Cultura de SP" },
+            { n: "15+", l: "anos na Secretaria de Estado da Cultura de SP" },
             { n: "14", l: "anos de atuação na área jurídica" },
             { n: "2023–2026", l: "Atuação no CONPRESP — Patrimônio de SP" },
             { n: "2.000+", l: "pessoas atendidas em palestras, oficinas e atividades" },
